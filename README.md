@@ -1,3 +1,5 @@
+In this link you could watch a video that describe the project functionality:https://youtu.be/jMzNwTK1zCI
+
 # AdminPro
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.3.
