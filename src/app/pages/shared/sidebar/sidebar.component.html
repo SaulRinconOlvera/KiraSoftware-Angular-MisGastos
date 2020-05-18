@@ -1,0 +1,28 @@
+<!-- ============================================================== -->
+<!-- Sidebar scss in sidebar.scss -->
+<!-- ============================================================== -->
+<aside class="left-sidebar">
+  <ul id="slide-out" class="sidenav">
+    <li style="display: block;">
+      <ul class="collapsible">
+        <li class="small-cap"><span class="hide-menu">PERSONAL</span></li>
+        <li *ngFor="let menu of menuService.menu">
+          <a class="collapsible-header has-arrow">
+            <i class="material-icons">{{ menu.icono}}</i>
+            <span class="hide-menu"> {{ menu.titulo }}</span>
+          </a>
+          <div class="collapsible-body" >
+            <ul class="collapse">
+              <li *ngFor="let opcion of menu.options" routerLinkActive='active'>
+                <a [routerLink]="[ opcion.url ]">
+                  <i class="material-icons">adjust</i>
+                  <span class="hide-menu">{{ opcion.titulo }}</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</aside>

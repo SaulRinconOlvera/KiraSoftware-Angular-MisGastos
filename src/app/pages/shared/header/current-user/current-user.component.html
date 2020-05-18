@@ -1,0 +1,42 @@
+<!-- ============================================================== -->
+<!-- Profile icon scss in header.scss -->
+<!-- ============================================================== -->
+<li>
+    <a class="dropdown-trigger" href="javascript: void(0);" data-target="user_dropdown"><img
+            src="{{ session.getAvatar() }}" alt="user" class="circle profile-pic" /></a>
+
+    <ul id="user_dropdown" class="mailbox dropdown-content dropdown-user">
+        <li>
+            <div class="dw-user-box">
+                <div class="u-img">
+                    <img src="{{ session.getAvatar() }}" alt="user" />
+                </div>
+                <div class="u-text">
+                    <h4> {{ session.user.personName }}</h4>
+                    <p>{{ session.user.email }}</p>
+                    <a routerLink="/profile" (click)="onSelectOption()" class="waves-effect waves-light btn-small red white-text">View Profile</a>
+                </div>
+            </div>
+        </li>
+        <li role="separator" class="divider"></li>
+        <li>
+            <a routerLink="/profile"><i class="material-icons">account_circle</i> My Profile</a>
+        </li>
+        <li>
+            <a href="#"><i class="material-icons">account_balance_wallet</i> My
+                Balance</a>
+        </li>
+        <li>
+            <a href="#"><i class="material-icons">inbox</i> Inbox</a>
+        </li>
+        <li role="separator" class="divider"></li>
+        <li>
+            <a href="#"><i class="material-icons">settings</i> Account Setting</a>
+        </li>
+        <li role="separator" class="divider"></li>
+        <li>
+            <a (click)="onLogOut()"><i class="material-icons">power_settings_new</i> Logout</a>
+        </li>
+    </ul>
+</li>
+

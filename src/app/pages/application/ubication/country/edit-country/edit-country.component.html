@@ -1,0 +1,28 @@
+<div class="card">
+    <div class="card-content">
+        <h4 class="card-title">Country</h4>
+        <h6 class="card-subtitle"></h6>
+
+        <form ngNativeValidate [formGroup]="form" (ngSubmit)="saveModel()" class="m-l-20 m-r-40">
+            <div class="row">
+                <div class="input-field col s5">
+                    <input formControlName="id" name="id" id="id" type="hidden" >
+                    <input formControlName="name" name="name" id="name" maxlength=100  class="validate" required type="text">
+                    <label for="name" class="">Name</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s5">
+                    <input formControlName="shortName" name="shortName" id="shortName"  maxlength=20 type="text">
+                    <label for="shortName">Short Name</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s5">
+                    <button (click)="cancel()" class="btn btn-round waves-effect waves-ligh red right" type="submit"  name="action">Cancel</button>
+                    <button class="btn btn-round waves-effect waves-light green right m-r-5" name="action">Save</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

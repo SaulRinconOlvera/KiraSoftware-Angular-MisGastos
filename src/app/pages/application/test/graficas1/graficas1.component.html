@@ -1,0 +1,32 @@
+<div class="card">
+  <div class="card-content">
+      <h4 class="card-title">Contact Employee list</h4>
+      <h6 class="card-subtitle"></h6>
+      <div class="table-responsive">
+        <dx-data-grid
+          id="gridCountries"
+          [dataSource]="countries"
+          [rowAlternationEnabled]="true"
+          [showColumnLines]="false"
+          [searchPanel]="true"
+          [showBorders]="false">
+          <dxo-export [enabled]="true" fileName="Countries" ></dxo-export>
+          <dxo-paging [pageSize]="10"></dxo-paging>
+          <dxo-pager
+              [showPageSizeSelector]="true"
+              [allowedPageSizes]="[10, 25]">
+          </dxo-pager>
+          <dxo-editing mode="row" [allowUpdating]="true" [allowDeleting]="true" [useIcons]="true"></dxo-editing>
+          <dxi-column dataField="id" [width]="50" dataType="string"></dxi-column>
+          <dxi-column dataField="name" dataType="string"></dxi-column>
+          <dxi-column dataField="shortName" dataType="string"></dxi-column>
+          <dxi-column type="buttons" [width]="80">
+              <dxi-button name="edit" [onClick]="areYouSure"></dxi-button>
+              <dxi-button name="delete" [onClick]="areYouSure"></dxi-button>
+          </dxi-column>
+      </dx-data-grid>
+      </div>
+  </div>
+</div>
+
+

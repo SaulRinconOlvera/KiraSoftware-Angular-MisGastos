@@ -1,0 +1,49 @@
+<div class="card">
+    <div class="card-content">
+        <h4 class="card-title">Countries list</h4>
+        <h6 class="card-subtitle"></h6>
+        <div class="table">
+            <div class="row">
+                <div class="input-field s6 col">
+                    <i class="material-icons prefix">search</i>
+                    <input (input)="onChangeSearch($event.target.value)" id="txtSearch" type="text">
+                    <label for="txtSearch" class="">Search</label>
+                </div>
+                <div class="input-field s5 p-10 col">
+                    <!-- <a (click)="export('PDF')" class="btn tooltipped btn-floating right btn-small red darken-2 waves-effect waves-light"
+                      data-position="bottom" data-delay="50" data-tooltip="Export to PDF file">
+                      <i class="fas fa-file-pdf"></i>
+                    </a>
+                    <a (click)="export('Excel')" class="btn tooltipped btn-floating m-r-5 right btn-small green darken-3 waves-effect waves-light"
+                      data-position="bottom" data-delay="50" data-tooltip="Export to XLSX file">
+                      <i class="fas fa-file-excel"></i>
+                    </a> -->
+                </div>
+                <div class="input-field s1 p-10 col">
+                    <a (click)="addNew()" class="btn btn-floating m-r-20 right btn-small waves-effect waves-light"
+                      data-position="bottom" data-delay="50">
+                      <i class="material-icons">add</i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="row">
+              <div class="col col-12">
+                  <dx-data-grid id="gridCountries" [dataSource]="countries" (onInitialized)="saveGridInstance($event)" [rowAlternationEnabled]="true" [showColumnLines]="false" [showBorders]="false">
+                      <dxo-paging [pageSize]="10"></dxo-paging>
+                      <dxo-pager [showPageSizeSelector]="true" [allowedPageSizes]="[10, 25]">
+                      </dxo-pager>
+                      <dxo-editing mode="row" [allowUpdating]="true" [allowDeleting]="true" [useIcons]="true"></dxo-editing>
+                      <dxi-column dataField="id" [width]="50" dataType="string"></dxi-column>
+                      <dxi-column dataField="name" dataType="string"></dxi-column>
+                      <dxi-column dataField="shortName" dataType="string"></dxi-column>
+                      <dxi-column type="buttons" [width]="80">
+                          <dxi-button name="edit" [onClick]="onEdit"></dxi-button>
+                          <dxi-button name="delete" [onClick]="onDelete"></dxi-button>
+                      </dxi-column>
+                  </dx-data-grid>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,71 @@
+<!-- <div class="row"> -->
+<form ngNativeValidate #form="ngForm" (ngSubmit)="guardar(form.value)">
+    <div class="card col s12" style="overflow: visible;">
+        <div class="card-content">
+            <h5 class="card-title activator">Profile of</h5>
+            <h6 class="card-subtitle">{{ user.personName }}</h6>
+            <div [ngClass]="(updateForm) ? 'progress' : ''">
+                <div class ="indeterminate"></div>
+            </div>
+            <div class="card col s12 l6">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">account_circle</i>
+                        <input [ngModel]="user.personName" name="personName" required id="personName" type="text">
+                        <label for="personName" class="">Person Name</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">face</i>
+                        <input [ngModel]="user.alias" name="alias" id="alias" type="text">
+                        <label for="alias" class="">Alias</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">email</i>
+                        <input [ngModel]="user.email" name="email" required id="email" type="email">
+                        <label for="email">Email</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">local_phone</i>
+                        <textarea [ngModel]="user.phoneNumber" name="phoneNumber" id="phone" class="materialize-textarea" style="height: 46px;"></textarea>
+                        <label for="phone">Phone</label>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card col s12 l6">
+                <div class="row center-align">
+                    <img *ngIf="imageTemporal" src="{{ imageTemporal }}" width="250" class="circle" alt="user">
+                    <img *ngIf="!imageTemporal" src="{{ session.getAvatar() }}" width="250" class="circle" alt="user">
+                    <br><br>
+                    <div class="col s12">
+                        <div class="file-field input-field">
+                            <div [ngClass]="{'disabled': user.isLogedBySN}" class="btn waves-effect waves-light btn-smal">
+                                <span>Change Photo</span>
+                                <input (change)="onFileSelect($event.target.files[0])" accept=".png, .jpg" type="file">
+                            </div>
+                            <div class="file-path-wrapper">
+                                <input disabled class="file-path validate" type="text">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <button [ngClass]="(updateForm) ? 'disabled' : ''" class="btn cyan waves-effect waves-light right"
+                          type="submit" name="action">
+                        <i class="fas fa-save image_in_button"></i>Save</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</form>
+<!-- </div> -->

@@ -1,0 +1,100 @@
+<div class="card-content">
+    <h5 class="card-title">Profile Page</h5>
+    <div class="row">
+        <!-- Setting -->
+        <div id="settings" class="col s12">
+            <div class="m-t-10 p-10 b-b">
+                <h6 class="font-medium">Layout Settings</h6>
+                <ul class="m-t-15">
+                    <li class="m-b-10">
+                        <label>
+                            <input (click)="cambiarColor($event.target)" type="checkbox" [checked]="preferencias.Theme" name="theme-view" id="theme-view" />
+                            <span>Dark Theme</span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <div class="p-10 b-b">
+                <!-- Logo BG -->
+                <h6 class="font-medium">Logo Backgrounds</h6>
+                <ul (click)="cambiarColor($event.target)" class="m-t-15 theme-color">
+                    <li class="theme-item">
+                        <a href="javascript:void(0)" class="theme-link" data-logobg="skin1"></a>
+                    </li>
+                    <li class="theme-item">
+                        <a href="javascript:void(0)" class="theme-link" data-logobg="skin2"></a>
+                    </li>
+                    <li class="theme-item">
+                        <a href="javascript:void(0)" class="theme-link" data-logobg="skin3"></a>
+                    </li>
+                    <li class="theme-item">
+                        <a href="javascript:void(0)" class="theme-link" data-logobg="skin4"></a>
+                    </li>
+                    <li class="theme-item">
+                        <a href="javascript:void(0)" class="theme-link" data-logobg="skin5"></a>
+                    </li>
+                    <li class="theme-item">
+                        <a href="javascript:void(0)" class="theme-link" data-logobg="skin6"></a>
+                    </li>
+                </ul>
+                <!-- Logo BG -->
+            </div>
+            <div class="p-10 b-b">
+                <!-- Navbar BG -->
+                <h6 class="font-medium">Navbar Backgrounds</h6>
+                <ul (click)="cambiarColor($event.target)" class="m-t-15 theme-color">
+                    <li class="theme-item">
+                        <a href="javascript:void(0)" class="theme-link" data-navbarbg="skin1"></a>
+                    </li>
+                    <li class="theme-item">
+                        <a href="javascript:void(0)" class="theme-link" data-navbarbg="skin2"></a>
+                    </li>
+                    <li class="theme-item">
+                        <a href="javascript:void(0)" class="theme-link" data-navbarbg="skin3"></a>
+                    </li>
+                    <li class="theme-item">
+                        <a href="javascript:void(0)" class="theme-link" data-navbarbg="skin4"></a>
+                    </li>
+                    <li class="theme-item">
+                        <a href="javascript:void(0)" class="theme-link" data-navbarbg="skin5"></a>
+                    </li>
+                    <li class="theme-item">
+                        <a href="javascript:void(0)" class="theme-link" data-navbarbg="skin6"></a>
+                    </li>
+                </ul>
+                <!-- Navbar BG -->
+            </div>
+            <div class="p-10 b-b">
+                <!-- Logo BG -->
+                <h6 class="font-medium">Sidebar Backgrounds</h6>
+                <ul (click)="cambiarColor($event.target)" class="m-t-15 theme-color">
+                    <li class="theme-item">
+                        <a href="javascript:void(0)" class="theme-link" data-sidebarbg="skin1"></a>
+                    </li>
+                    <li class="theme-item">
+                        <a href="javascript:void(0)" class="theme-link" data-sidebarbg="skin2"></a>
+                    </li>
+                    <li class="theme-item">
+                        <a href="javascript:void(0)" class="theme-link" data-sidebarbg="skin3"></a>
+                    </li>
+                    <li class="theme-item">
+                        <a href="javascript:void(0)" class="theme-link" data-sidebarbg="skin4"></a>
+                    </li>
+                    <li class="theme-item">
+                        <a href="javascript:void(0)" class="theme-link" data-sidebarbg="skin5"></a>
+                    </li>
+                    <li class="theme-item">
+                        <a href="javascript:void(0)" class="theme-link" data-sidebarbg="skin6"></a>
+                    </li>
+                </ul>
+                <!-- Logo BG -->
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6">
+            <button (click)="guardarCambios()" class="btn-small right w10 blue accent-4 waves-effect waves-light" type="submit">Save</button>
+        </div>
+    </div>
+</div>

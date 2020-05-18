@@ -1,0 +1,96 @@
+<div class="main-wrapper">
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader__figure"></div>
+            <p class="loader__label">Admin Pro</p>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- Login box.scss -->
+    <!-- ============================================================== -->
+    <div class="auth-wrapper d-flex no-block justify-content-center align-items-center login-register">
+        <div class="container">
+            <div class="auth-box auth-sidebar">
+                <div id="loginform">
+                    <div class="p-l-10">
+                        <h5 class="font-medium m-b-0 m-t-40">Sign Up to Admin</h5>
+                        <small>Just login to your account</small>
+                    </div>
+                    <!-- Form -->
+                    <div class="row">
+                        <form  ngNativeValidate [formGroup]="form" (ngSubmit)="registerUser()" class="col s12" action="index.html">
+                            <!-- email -->
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input formControlName="name" id="name" name="name" type="text" class="validate" required>
+                                    <label for="name">Name</label>
+                                </div>
+                            </div>
+                            <!-- email -->
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input name="email" formControlName="email" id="email" type="email" class="validate" required>
+                                    <label for="email">Email</label>
+                                </div>
+                            </div>
+                            <!-- pwd -->
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input name="password" formControlName="password" id="password" type="password" class="validate" required>
+                                    <label for="password">Password</label>
+                                </div>
+                            </div>
+                            <!-- pwd -->
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input [ngClass]="(form.errors?.checkForSamePass && !form.pristine)?'ng-invalid invalid':''" name="password2" formControlName="password2" id="cpassword" type="password" class="validate" required>
+                                    <label for="cpassword">Password</label>
+                                    <span class="helper-text error" *ngIf="form.errors?.checkForSamePass && !form.pristine" >The passwords aren't equals</span>
+                                </div>
+                            </div>
+                            <!-- pwd -->
+                            <div class="row m-t-5">
+                                <div class="col s7">
+                                    <label>
+                                        <input name="iAgree" formControlName="iAgree"  type="checkbox" />
+                                        <span>Agree to all Terms</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <!-- pwd -->
+                            <div class="row m-t-40">
+                                <div class="col s12">
+                                    <button class="btn-large w100 red" type="submit">Sign Up</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="center-align m-t-20 db">
+                        Already have an account? <a routerLink="/login">Sign in!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Login box.scss -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- Page wrapper scss in scafholding.scss -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- Page wrapper scss in scafholding.scss -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- Right Sidebar -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- Right Sidebar -->
+    <!-- ============================================================== -->
+</div>

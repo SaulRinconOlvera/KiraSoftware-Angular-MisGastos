@@ -1,0 +1,94 @@
+<div class="main-wrapper">
+  <!-- ============================================================== -->
+  <!-- Preloader - style you can find in spinners.css -->
+  <!-- ============================================================== -->
+  <div class="preloader">
+    <div class="loader">
+      <div class="loader__figure"></div>
+      <p class="loader__label">Admin Pro</p>
+    </div>
+  </div>
+  <!-- ============================================================== -->
+  <!-- Preloader - style you can find in spinners.css -->
+  <!-- ============================================================== -->
+  <!-- ============================================================== -->
+  <!-- Login box.scss -->
+  <!-- ============================================================== -->
+  <div class="auth-wrapper d-flex no-block justify-content-center align-items-center login-register">
+    <span class="center-block">Kira Software</span>
+    <div class="container">
+      <div class="auth-box auth-sidebar">
+        <div id="loginform">
+          <div class="p-l-10">
+            <h5 class="font-medium m-b-0 m-t-40">Sign In to Admin Pro</h5>
+            <small>Just login to your account</small>
+          </div>
+          <!-- Form -->
+          <div class="row">
+            <form ngNativeValidate #form="ngForm" class="col s12" (ngSubmit)="login(form)" action="index.html">
+              <!-- email -->
+              <div class="row">
+                <div class="input-field col s12">
+                  <input [(ngModel)]="user" name="email" id="email" type="email" class="validate" required>
+                  <label for="email">Email</label>
+                </div>
+              </div>
+              <!-- pwd -->
+              <div class="row">
+                <div class="input-field col s12">
+                  <input ngModel name="password" id="password" type="password" class="validate" required>
+                  <label for="password">Password</label>
+                </div>
+              </div>
+              <!-- rmm -->
+              <div class="row m-t-5">
+                <div class="col s7">
+                  <label>
+                    <input [(ngModel)]="rememberMe" name="rememberMe" type="checkbox" />
+                    <span>Remember Me?</span>
+                  </label>
+                </div>
+                <!-- <div class="col s5 right-align"><a href="#" class="link" id="to-recover">Forgot Pwd?</a></div> -->
+              </div>
+              <!-- pwd -->
+              <div class="row m-t-40">
+                <div class="col s12">
+                  <button class="btn-large w100 blue accent-4" type="submit">Login</button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div *ngIf="showSocialDiv" class="center-align m-t-20 db">
+            <a *ngIf="showFaceDiv" (click)="facebookLogin()" class="btn tooltipped m-r-5" data-position="top"
+              data-tooltip="Login with Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a *ngIf="showGoogleDiv" (click)="googleLogin()" class="btn tooltipped m-r-5" data-position="down"
+              data-tooltip="Login with Google">
+              <i class="fab fa-google-plus-g"></i>
+            </a>
+          </div>
+          <div class="center-align m-t-20 db">
+            Don't have an account? <a routerLink="/register">Sign Up!</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================== -->
+  <!-- Login box.scss -->
+  <!-- ============================================================== -->
+  <!-- ============================================================== -->
+  <!-- Page wrapper scss in scafholding.scss -->
+  <!-- ============================================================== -->
+  <!-- ============================================================== -->
+  <!-- Page wrapper scss in scafholding.scss -->
+  <!-- ============================================================== -->
+  <!-- ============================================================== -->
+  <!-- Right Sidebar -->
+  <!-- ============================================================== -->
+  <!-- ============================================================== -->
+  <!-- Right Sidebar -->
+  <!-- ============================================================== -->
+</div>
